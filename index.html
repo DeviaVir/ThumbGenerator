@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Thumbgenerator : A PHP library to easily generate thumbs. Includes smart resize." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Thumbgenerator</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/DeviaVir/ThumbGenerator">View on GitHub</a>
+
+          <h1 id="project_title">Thumbgenerator</h1>
+          <h2 id="project_tagline">A PHP library to easily generate thumbs. Includes smart resize.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/DeviaVir/ThumbGenerator/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/DeviaVir/ThumbGenerator/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>Usage</h1>
+
+<ul>
+<li>Include thumb.lib.php</li>
+<li>Request Thumb::Create function:</li>
+</ul><pre><code>Thumb::Create(
+    $path = "/mnt/home/deviavir/domains/github.com/image.png",
+    $type = 'smart', // Resize, Crop, Smart(resize), Rotate
+    $width = '200',
+    $height = '100',
+);
+</code></pre>
+
+<p>This will generate a $path . '.thumb.png' file and return the updated path.</p>
+
+<p>The smart library is based on ThumbXGen for the backend, the frontend class is just to make things easier.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Thumbgenerator maintained by <a href="https://github.com/DeviaVir">DeviaVir</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
