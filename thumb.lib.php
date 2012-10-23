@@ -88,13 +88,19 @@
                                 print '<pre>'; print_r( self::$exceptions ); print '</pre>';
                         }
                         
-                        // Let's replace the last value with some stuff..
-                        $arr = explode( '.', $path );    
-                        $val = array_pop( $arr );
-                        $arr[] = 'thumb.png';
-                        $arr = implode( '.', $arr );
+                        // Add '-thumb' to the end of the filename
+                        $arr = explode( '.', $path );
+                        $val = array_pop( $arr ); // get the file extension
+
+                        $i = count($arr);
+                        $arr[$i-1] .= '-thumb'; // add '-thumb' to the filename
+                        $arr[] = $val; // add the file extension back on
+                        $arr = implode( '.', $arr ); // join the array back to one string
                         
-                        self::$thumb->save( $arr, 'png' );
+                        if( $val == "jpeg" )
+                                $val = "jpg";
+
+                        self::$thumb->save( $arr, $val );
                         return $arr;
                 }
         }   
